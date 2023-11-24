@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeditActivity"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:editable="false"
+            android:hint="Name" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editName"
+            android:editable="false"
+            android:layout_marginTop="16dp"
+            android:hint="Email" />
+
+        <EditText
+            android:id="@+id/editPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editEmail"
+            android:layout_marginTop="16dp"
+            android:hint="Password" />
+
+        <EditText
+            android:id="@+id/editVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editPass"
+            android:layout_marginTop="16dp"
+            android:hint="Visit"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/editTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editVisit"
+            android:layout_marginTop="16dp"
+            android:hint="Time" />
+
+        <EditText
+            android:id="@+id/editRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTime"
+            android:layout_marginTop="16dp"
+            android:hint="Room" />
+
+        <EditText
+            android:id="@+id/editDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editRoom"
+            android:layout_marginTop="16dp"
+            android:hint="Day" />
+
+        <EditText
+            android:id="@+id/editSpc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editDay"
+            android:layout_marginTop="16dp"
+            android:hint="Expertise" />
+
+        <EditText
+            android:id="@+id/editAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editSpc"
+            android:layout_marginTop="16dp"
+            android:editable="false"
+            android:hint="Age" />
+
+        <EditText
+            android:id="@+id/editPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editAge"
+            android:layout_marginTop="16dp"
+            android:editable="false"
+            android:hint="Phone" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editPhone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_man_4_24"
+            android:minWidth="250dp"
+            android:minHeight="250dp"
+            android:maxWidth="400dp"
+            android:maxHeight="500dp"/>
+
+        <Button
+            android:id="@+id/chooseImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Edit Image" />
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chooseImageButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="EDIT" />
+    </RelativeLayout>
+</ScrollView>
