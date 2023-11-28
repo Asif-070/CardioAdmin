@@ -95,7 +95,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/editAge"
             android:layout_marginTop="16dp"
-            android:editable="false"
             android:hint="Phone" />
 
         <ImageView

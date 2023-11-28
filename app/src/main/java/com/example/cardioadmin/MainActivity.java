@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         c1 = findViewById(R.id.profile);
         c2 = findViewById(R.id.doctor);
         c3 = findViewById(R.id.patient);
+        c4 = findViewById(R.id.ambulance);
 
 
         c1.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PatientActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        c4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddAmbActivity.class);
                 startActivity(intent);
             }
         });

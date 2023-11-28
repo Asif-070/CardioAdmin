@@ -30,7 +30,7 @@ import com.google.firebase.storage.UploadTask;
 
 public class AddActivity extends AppCompatActivity {
 
-    EditText e1,e2,e3,e4,em,ep,es,ed;
+    EditText e1,e2,e3,e4,em,ep,es,ed,eph;
     ImageView img;
     Button b1,b2;
     Uri imguri;
@@ -52,6 +52,7 @@ public class AddActivity extends AppCompatActivity {
         ep = findViewById(R.id.editPass);
         es = findViewById(R.id.editSpc);
         ed = findViewById(R.id.editDay);
+        eph = findViewById(R.id.editPhn);
         b1 = findViewById(R.id.chooseImageButton);
         b2 = findViewById(R.id.updateButton);
         img = findViewById(R.id.imageView);
@@ -75,12 +76,13 @@ public class AddActivity extends AppCompatActivity {
                 String visit = e2.getText().toString();
                 String time = e3.getText().toString();
                 String room = e4.getText().toString();
+                String phn = ep.getText().toString();
                 String email = em.getText().toString();
-                String pass = ep.getText().toString();
+                String pass = eph.getText().toString();
                 String spc = es.getText().toString();
 
                 // Check if any information is missing
-                if (name.isEmpty() || visit.isEmpty() || time.isEmpty() || room.isEmpty() || email.isEmpty() || pass.isEmpty() || spc.isEmpty() ||imguri == null) {
+                if (name.isEmpty() || visit.isEmpty() || time.isEmpty() || room.isEmpty() || email.isEmpty() || pass.isEmpty() || spc.isEmpty() || phn.isEmpty() ||imguri == null) {
                     StringBuilder errorMessage = new StringBuilder("Please fill in the field ");
 
                     if (name.isEmpty()) {
@@ -94,6 +96,9 @@ public class AddActivity extends AppCompatActivity {
                     }
                     else if (pass.isEmpty()) {
                         errorMessage.append("- Password\n");
+                    }
+                    else if (phn.isEmpty()) {
+                        errorMessage.append("- Phone no\n");
                     }
                     else if (visit.isEmpty()) {
                         errorMessage.append("Visit");
@@ -167,6 +172,7 @@ public class AddActivity extends AppCompatActivity {
         String room = e4.getText().toString();
         String day = ed.getText().toString();
         String email = em.getText().toString();
+        String phone = eph.getText().toString();
         String pass = ep.getText().toString();
         String spc = es.getText().toString();
         String doctorId = email.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
@@ -183,7 +189,7 @@ public class AddActivity extends AppCompatActivity {
                 imageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
-                        Dataclass dataClass = new Dataclass(finalDoctorId, name, time, room, day, email, pass, spc, uri.toString(), visit, 0, "...", "...", "Nil", "...", "...");
+                        Dataclass dataClass = new Dataclass(finalDoctorId, name, time, room, day, email, pass, spc, uri.toString(), visit, 0, "...", "...", phone, "...", "...");
                         databaseReference.child(finalDoctorId).setValue(dataClass);
                         Toast.makeText(AddActivity.this, "Uploaded", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(AddActivity.this, MainActivity.class);

@@ -35,10 +35,18 @@
             android:hint="Password"/>
 
         <EditText
-            android:id="@+id/editVisit"
+            android:id="@+id/editPhn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/editPass"
+            android:layout_marginTop="16dp"
+            android:hint="Phone no."/>
+
+        <EditText
+            android:id="@+id/editVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editPhn"
             android:inputType="numberDecimal"
             android:layout_marginTop="16dp"
             android:hint="Visit"/>

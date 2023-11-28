@@ -129,6 +129,7 @@ public class DeditActivity extends AppCompatActivity {
         databaseReference.child("pass").setValue(editPass.getText().toString());
         databaseReference.child("visit").setValue(Integer.parseInt(editVisit.getText().toString()));
         databaseReference.child("time").setValue(editTime.getText().toString());
+        databaseReference.child("phone").setValue(phn.getText().toString());
         databaseReference.child("room").setValue(editRoom.getText().toString());
         databaseReference.child("day").setValue(editDay.getText().toString());
         databaseReference.child("spc").setValue(editSpc.getText().toString());
@@ -161,6 +162,7 @@ public class DeditActivity extends AppCompatActivity {
 
             // Finish the activity or navigate back to the profile page
             Intent intent = new Intent(DeditActivity.this, DoctorViewActivity.class);
+            intent.putExtra("DoctorID", doctorID);
             startActivity(intent);
             finish();
         }
