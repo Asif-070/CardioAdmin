@@ -105,7 +105,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/baseline_man_4_24"
+            android:src="@drawable/empty"
             android:minWidth="250dp"
             android:minHeight="250dp"
             android:maxWidth="400dp"

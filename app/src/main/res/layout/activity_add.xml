@@ -99,7 +99,7 @@
             android:layout_below="@+id/chooseImageButton"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
-            android:src="@drawable/baseline_man_4_24"
+            android:src="@drawable/empty"
             android:scaleType="centerCrop"/>
 
         <Button

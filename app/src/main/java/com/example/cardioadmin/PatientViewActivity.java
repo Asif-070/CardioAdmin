@@ -30,8 +30,6 @@ public class PatientViewActivity extends AppCompatActivity {
     CircleImageView profile;
     CardView c1;
     ImageView back;
-    String uid;
-
     private TextView name, phone, type, age, blood, gender;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +66,6 @@ public class PatientViewActivity extends AppCompatActivity {
                     String phone2 = dataSnapshot.child("phone").getValue().toString();
                     String blood2 = dataSnapshot.child("bt").getValue().toString();
                     String imageUrl = dataSnapshot.child("imgurl").getValue().toString();
-                    uid = dataSnapshot.child("uid").getValue().toString();
 
                     // Set the fetched data to TextViews
                     name.setText(name2);
