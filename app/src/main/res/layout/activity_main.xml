@@ -16,18 +16,19 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="12dp"
-        android:text="MAIN MENU"
+        android:text="ADMIN"
         android:textColor="#fff"
         android:textSize="30sp"
         android:textStyle="bold" />
 
     <GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/title_view"
         android:layout_margin="20dp"
         android:columnCount="2"
-        android:rowCount="2">
+        android:rowCount="3">
 
 
         <androidx.cardview.widget.CardView
@@ -168,6 +169,41 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/appointment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true"
+            android:layout_columnWeight="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/appointment"
+                android:layout_marginBottom="7dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD APPOINTMENT"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
     </GridLayout>
 
